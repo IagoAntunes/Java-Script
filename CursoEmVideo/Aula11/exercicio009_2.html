@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+
+    <style>
+        body{
+            display: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #botao{
+            margin-top: 1.3rem;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>NOME</h1>
+    <input type="text" name="nome" id="nome">
+
+    <h1>Nacionalidade</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="calcular()" id="botao" >
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var pais = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var nome = window.document.getElementById('nome')
+            var rnome = (nome.value)
+            var resposta = (pais.value)
+            res.innerHTML +=`<p>Seja Bem Vindo ${rnome}</p>`
+            if(resposta.toUpperCase() == 'BRASIL'){
+                res.innerHTML += '<p>Você é do Brasil!!</p>'
+            }else if(resposta.toUpperCase() == ''){
+                res.innerHTML += `<p>Digita Alguma Coisa ${rnome} :(</p>`
+            }else{
+                res.innerHTML += '<p>Você é Estrangeiro!!</p>'
+                
+            }
+        }
+
+
+
+    </script>
+
+    
+</body>
+</html>

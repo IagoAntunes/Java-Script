@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+
+    <style>
+        body{
+            background: rgb(25, 160, 170);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Iniciando com DOOM</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">só test</div>
+
+    <script>
+        /* Por marca */
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'yellow'
+        window.document.write("Esta escrito assim "+ p1.innerText)
+        corpo.style.background = 'green'
+
+        /*  COM ID */
+        var d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+
+        /* Por Selector */
+        var s = window.document.querySelector('div#msg')
+        s.style.color = 'yellow'
+        s.style.background = 'black'
+
+        
+
+
+
+    </script>
+</body>
+</html>
